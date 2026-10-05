@@ -1,0 +1,10 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "fox.moc3",
+		"Textures": [
+			"fox.2048/texture_00.png"
+		],
+		"DisplayInfo": "fox.cdi3.json"
+	}
+}

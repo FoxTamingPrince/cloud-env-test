@@ -1,0 +1,7 @@
+{
+  "folders": [{"path":"."}],
+  "settings": {
+    "files.exclude":{"**/node_modules":true,"**/.pnpm-store":true,"**/.next":true,"**/.wrangler":true},
+    "search.exclude":{"**/node_modules":true,"**/vendor":true,"**/.env*":true,"**/.dev.vars*":true}
+  }
+}

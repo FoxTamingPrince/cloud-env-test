@@ -1,0 +1,6 @@
+{
+  "name": "fox-cubism-asset-tools",
+  "private": true,
+  "description": "Local tools for packing original fox layers into PSD; not part of the web app",
+  "dependencies": { "ag-psd": "31.0.2" }
+}

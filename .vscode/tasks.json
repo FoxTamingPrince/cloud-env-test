@@ -1,0 +1,6 @@
+{"version":"2.0.0","tasks":[
+{"label":"小狐狸：启动本地工程","type":"shell","command":"./start-local.command","isBackground":true,"problemMatcher":[],"presentation":{"reveal":"always","panel":"dedicated"}},
+{"label":"小狐狸：安装依赖","type":"shell","command":"pnpm run setup","problemMatcher":[]},
+{"label":"小狐狸：构建网页","type":"shell","command":"pnpm build:voice","problemMatcher":[]},
+{"label":"小狐狸：构建 Live2D","type":"shell","command":"pnpm build:live2d","problemMatcher":[]}
+]}

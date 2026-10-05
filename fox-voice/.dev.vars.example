@@ -1,0 +1,3 @@
+FOX_API_BASE=https://your-fox-platform.example/v1
+FOX_API_KEY=
+FOX_MODEL=bailian1-qwen-flash

@@ -1,0 +1,12 @@
+{
+  "modelUrl": "./models/fox/fox.model3.json",
+  "shaderPath": "./vendor/Framework/Shaders/WebGL/",
+  "tailMode": "direct",
+  "requiredRoles": ["mouthOpen", "eyeLeft", "eyeRight", "tailSwing"],
+  "parameterIds": {
+    "mouthOpen": "ParamMouthOpenY",
+    "eyeLeft": "ParamEyeLOpen",
+    "eyeRight": "ParamEyeROpen",
+    "tailSwing": "ParamTailSwing"
+  }
+}

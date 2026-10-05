@@ -1,0 +1,9 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><title>狐狸动作检查</title><style>body{margin:0;background:#e8d9bf;font:16px system-ui;display:grid;grid-template-columns:1fr 220px;grid-template-rows:minmax(0,1fr);height:100vh}iframe{width:100%;height:100%;border:0}aside{min-height:0;overflow:auto;padding:24px;display:flex;gap:16px;flex-direction:column}button{font:inherit;padding:12px}output{white-space:pre-wrap;font-size:12px;overflow-wrap:anywhere}</style><iframe id="fox" src="./fox-live2d/index.html?v=20261005-4&review=1"></iframe><aside><button id="speak">说话演示</button><button id="stop">停止说话</button><button id="left">看左边</button><button id="right">看右边</button><button id="center">看向我</button><output id="pose"></output><output id="state">载入中</output></aside><script>
+const frame=document.querySelector('#fox');let timer=null;
+const send=v=>frame.contentWindow.postMessage(v,location.origin);
+const stop=()=>{clearInterval(timer);timer=null;send({type:'fox-mouth',speaking:false,level:0})};
+document.querySelector('#speak').onclick=()=>{stop();const start=performance.now();timer=setInterval(()=>{let t=(performance.now()-start)/1000;send({type:'fox-mouth',speaking:true,level:.18+Math.max(0,Math.sin(t*7))*.55+Math.max(0,Math.sin(t*13))*.18})},40)};
+document.querySelector('#stop').onclick=stop;
+for(const [id,x] of [['left',-1],['right',1],['center',0]])document.querySelector('#'+id).onclick=()=>send({type:'fox-gaze',x,y:0});
+addEventListener('message',e=>{if(e.origin===location.origin&&e.source===frame.contentWindow&&e.data?.type==='fox-live2d-pose')document.querySelector('#pose').textContent=JSON.stringify(e.data);if(e.origin===location.origin&&e.source===frame.contentWindow&&e.data?.type==='fox-live2d-state')document.querySelector('#state').textContent=JSON.stringify(e.data,null,2)});
+</script></html>

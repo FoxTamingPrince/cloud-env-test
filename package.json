@@ -1,0 +1,16 @@
+{
+  "name": "fox-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "dev": "node scripts/local-dev.mjs",
+    "dev:voice": "node scripts/local-dev.mjs voice",
+    "dev:live2d": "node scripts/local-dev.mjs live2d",
+    "setup": "node scripts/setup.mjs",
+    "build:voice": "pnpm --dir fox-voice build",
+    "build:live2d": "pnpm --dir fox-live2d-runtime-work build"
+  }
+}

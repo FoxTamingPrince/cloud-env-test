@@ -1,0 +1,18 @@
+{
+  "character": "original-front-watercolor-fox",
+  "target": "2.5D layered puppet with synchronized speech",
+  "parts": {
+    "body": {"parent": "root", "pivot": "feet", "motion": "subtle chest breathing"},
+    "tail": {"parent": "body", "pivot": "tail-root", "motion": "root rotation with delayed tip response"},
+    "head": {"parent": "body", "pivot": "neck", "motion": "small nod and listening tilt"},
+    "eyes": {"parent": "head", "motion": "gaze and asymmetric eyelid timing"},
+    "jaw": {"parent": "head", "pivot": "jaw-hinge", "motion": "continuous opening driven by audio clock"}
+  },
+  "verification": {
+    "appearance": "check rendered idle and speech, no exposed cut edges or doubled facial features",
+    "tail": "measure visible tail-tip displacement while root remains attached",
+    "eyes": "verify blink closure and reopening without color seams",
+    "speech": "shared playback clock; stop resets lips and smoothly settles secondary motion"
+  },
+  "complete": false
+}
