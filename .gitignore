@@ -32,3 +32,6 @@ venv/
 *.jar
 .local/
 local-settings.json
+# Voice gateway credentials are local configuration.
+voice-bridge/tts-config.json
+voice-bridge/fox-relay.key

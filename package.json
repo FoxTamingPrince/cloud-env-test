@@ -10,6 +10,7 @@
     "dev:voice": "node scripts/local-dev.mjs voice",
     "dev:live2d": "node scripts/local-dev.mjs live2d",
     "setup": "node scripts/setup.mjs",
+    "check:secrets": "node scripts/check-secrets.mjs",
     "build:voice": "pnpm --dir fox-voice build",
     "build:live2d": "pnpm --dir fox-live2d-runtime-work build"
   }

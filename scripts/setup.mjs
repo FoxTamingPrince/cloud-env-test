@@ -7,3 +7,6 @@ for(const dir of ['fox-voice','fox-live2d-runtime-work']){
  const r=spawnSync(pnpm,['install','--frozen-lockfile'],{cwd:path.join(root,dir),stdio:'inherit'});
  if(r.error)throw r.error;if(r.status)process.exit(r.status);
 }
+
+const git=spawnSync('git',['config','core.hooksPath','.githooks'],{cwd:root,stdio:'inherit'});
+if(git.status)process.exit(git.status);

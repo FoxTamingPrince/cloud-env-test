@@ -50,6 +50,10 @@ Live2D 已包含原创 `fox.moc3`、`fox.model3.json` 和纹理。动作预览�
 
 密钥、`.env*`、`.dev.vars*`、`node_modules`、缓存、安装包、下载的大模型权重和个人操作日志不提交。当前电脑的实际 `.dev.vars` 只保存在本地。
 
+`pnpm run setup` 会为本仓库启用提交前密钥检查。也可手动运行 `pnpm check:secrets`。检测仅报告文件名，不打印密钥；模式扫描不能代替人工检查。
+
+TTS 转发服务需要把 `voice-bridge/tts-config.example.json` 复制为本地 `tts-config.json` 并填写凭据，该文件已排除。ASR 转发另需 sherpa-onnx 模型文件和本地配置，不随网页自动启动。
+
 原型只保留源码和必要配置；历史截图、部分中间生成素材和大体积实验权重不包含在仓库中。远程控制脚本中部分路径和 SSH 别名与原作者环境有关，需要在其他电脑配置后使用。
 
 Live2D、Three.js、Rive 等第三方源码保留原许可和版权；遵守各自的分发及运行许可。项目记录与说明不表示已经完成云部署。
